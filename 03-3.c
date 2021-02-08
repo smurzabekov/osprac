@@ -6,7 +6,7 @@ int main(int argc, char *argv[], char *envp[])
 {
   
     printf("argc: %d", argc);
-    //puts(argc);
+    
   for(int i = 0; i < argc;i = i + 1){
   
     printf(" argv[]:");
