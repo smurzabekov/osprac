@@ -15,15 +15,15 @@ int main(int argc, char *argv[], char *envp[])
    } else if (pid == 0) {
      /* ребенок */
     printf("This is child's process\n"); 
-   
+   printf("Start programm solution of number 2 problem");
+    execl("/bin/cat", "/bin/cat", "03-1.c", 0);
+    //printf("Start programm solution of number 2 problem");
     
     
    } else {
      /* родитель */
     printf("This is parent's process\n");
-      printf("Start programm solution of number 2 problem");
-    execl("03-2.c", "bye", "assalamaleikum rahmtulahi va barakatuh");
-    //printf("Start programm solution of number 2 problem");
+      
    }
   
 }
