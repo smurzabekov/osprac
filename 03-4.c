@@ -1,0 +1,29 @@
+#include <sys/types.h>
+#include <unistd.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[], char *envp[])
+{
+   pid_t pid = fork();
+
+   if (pid == -1) {
+     /* ошибка */
+    printf("Error on program start\n");
+    exit(-1);
+    
+   } else if (pid == 0) {
+     /* ребенок */
+    printf("This is child's process\n"); 
+   
+    
+    
+   } else {
+     /* родитель */
+    printf("This is parent's process\n");
+      printf("Start programm solution of number 2 problem");
+    execl("03-2.c", "bye", "assalamaleikum rahmtulahi va barakatuh");
+    //printf("Start programm solution of number 2 problem");
+   }
+  
+}
