@@ -1,27 +1,19 @@
+#include <stdio.h>
 #include <sys/types.h>
 #include <unistd.h>
-#include <stdio.h>
 
-int main(int argc, char *argv[], char *envp[])
+int main(int argc, char* argv[], char* envp[])
 {
-  
-    printf("argc: %d", argc);
-    
-  for(int i = 0; i < argc;i = i + 1){
-  
-    printf(" argv[]:");
-    printf(" %d - %d", i, argv[i]);
-    puts(argv[i]);
-  }
-  for(int i = 0; i < argc;i = i + 1){
-    
-    printf(" envp[]:");
-    printf(" %d - %d", i, envp[i]);
-    puts(envp[i]);
-  }
+    printf("args: ");
+    for (int i = 0; i < argc; ++i)
+        printf("%s\n", argv[i]);
+    printf("\n");
 
+    printf("Envp: ");
+    int i = 0;
+    while (envp[i] != NULL)
+        printf("%s\n", envp[i++]);
+    printf("\n");
 
-  
-
-  return 0;
+    return 0;
 }
