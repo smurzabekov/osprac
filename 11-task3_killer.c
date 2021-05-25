@@ -10,7 +10,7 @@
 int main(void)
 {
     int msqid;      // IPC descriptor for the message queue
-    char pathname[]="11-task3-server.c"; // The file name used to generate the key.
+    char pathname[]="11-task3_server.c"; // The file name used to generate the key.
     // A file with this name must exist in the current directory.
     key_t  key;     // IPC key
     int i,len;      // Cycle counter and the length of the informative part of the message
